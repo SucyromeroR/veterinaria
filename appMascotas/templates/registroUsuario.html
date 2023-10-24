@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/css/registro.css">
+</head>
+
+{% with messages= get_flashed_messages() %}
+
+{% if messages %}
+<div class="alert alert-danger" role="alert">
+    {% for messages in messages %}
+    <strong>{{messages}}</strong>
+    <br>
+    {% endfor %}
+</div>
+{% endif %}
+
+{% endwith %}
+
+<body>
+    <h1> USUARIO NO REGISTRADO </h1>
+    <h1> REGISTRO DE USUARIO </h1>
+    <form action="/register_user" method="post">
+        <label> Identificación </label>
+        <input id="ident" name="ident"> <br> <br>
+        <label> Nombres </label>
+        <input id="nomb" name="nomb"> <br> <br>
+        <label> Apellidos </label>
+        <input id="apell" name="apell"> <br> <br>
+        <label> Tel. Contacto </label>
+        <input id="tel" name="tel"> <br> <br>
+        <label> Email </label>
+        <input id="email" name="email"> <br> <br>
+        <button id="btnRegistrar" type="submit"> Registrar </button>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+CREATE DATABASE db_mascotas;
+
+USE db_mascotas;
+
+CREATE TABLE usuario_login(
+usuario_log integer NOT NULL PRIMARY KEY,
+password_log varchar(60) NOT NULL
+);
+
+CREATE TABLE usuario(
+id_usuario integer NOT NULL PRIMARY KEY,
+nomb_usuario varchar(150) NOT NULL,
+apell_usuario varchar(150) NOT NULL,
+telef_usuario varchar(20) NOT NULL,
+email_usuario varchar(150) NOT NULL,
+usuario_log integer NOT NULL,
+FOREIGN KEY (usuario_log) REFERENCES usuario_login(usuario_log)
+);
+
+CREATE TABLE mascota(
+consec_mascota integer NOT NULL AUTO_INCREMENT PRIMARY KEY,
+id_usuario integer NOT NULL,
+nomb_mascota varchar(150) NOT NULL,
+apell_mascota varchar(150) NOT NULL,
+espec_mascota varchar(50) NOT NULL,
+raza_mascota varchar(50) NOT NULL,
+sexo_mascota  varchar(50) NOT NULL,
+color_mascota varchar(50) NOT NULL,
+peso_mascota double NOT NULL,
+FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario)
+);
+
+CREATE TABLE profesional(
+id_profesional integer NOT NULL PRIMARY KEY,
+nomb_profesional varchar(150) NOT NULL,
+apell_profesional varchar(150) NOT NULL,
+profe_profesional varchar(150) NOT NULL,
+telef_profesional varchar(20) NOT NULL,
+email_profesional varchar(150) NOT NULL
+);
+
+CREATE TABLE cita_veterinaria(
+consec_cita integer NOT NULL AUTO_INCREMENT PRIMARY KEY,
+consec_mascota integer NOT NULL,
+id_profesional integer NOT NULL,
+fecha_ingreso Date NOT NULL,
+descrip_ingreso varchar(250) NOT NULL,
+tratamiento varchar(250) NOT NULL,
+fecha_salida Date NOT NULL,
+FOREIGN KEY (consec_mascota) REFERENCES mascota(consec_mascota),
+FOREIGN KEY (id_profesional) REFERENCES profesional(id_profesional)
+);
+
+INSERT INTO profesional VALUES(52658124, 'Adriana Mileth', 'García Bosiga', 'Medico Veterinario', '3218526578', 'adriana.garcia@gmail.com');
+INSERT INTO profesional VALUES(79579407, 'Néstor Fernando', 'Medina Castro', 'Medico Veterinario', '3142075286','nestor.medina@gmail.com');
+INSERT INTO profesional VALUES(1019605051, 'Daniel Fernando', 'Medina Gómez', 'Medico Veterinario', '3202934299','daniel.medina@gmail.com');
+INSERT INTO profesional VALUES(58624753, 'Lina Valeria', 'Medina Alarcón', 'Medico Veterinario', '3118528578', 'lina.medina@gmail.com');
+INSERT INTO profesional VALUES(1010006578, 'Cristian Alejandro', 'Medina Alarcón', 'Medico Veterinario', '3205593654','cristian.medina@gmail.com');
+
+select * from profesional;
+
+select * from usuario_login; 
+
+select * from usuario;
+
+select * from mascota;

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/css/registroMascota.css">
+</head>
+
+{% with messages= get_flashed_messages() %}
+
+{% if messages %}
+<div class="alert alert-danger" role="alert">
+    {% for messages in messages %}
+    <strong>{{messages}}</strong>
+    <br>
+    {% endfor %}
+</div>
+{% endif %}
+
+{% endwith %}
+
+<body>
+    <h1> REGISTRO DE MASCOTA </h1>
+    <form action="/register_pet" method="post">
+        <label> Nombre Mascota </label>
+        <input id="namePet" name="namePet"> <br> <br>
+        <label> Apellido Mascota </label>
+        <input id="apellPet" name="apellPet"> <br> <br>
+        <label> Especie Mascota </label>
+        <input id="especPet" name="especPet"> <br> <br>
+        <label> Raza Mascota </label>
+        <input id="razaPet" name="razaPet"> <br> <br>
+        <label> Sexo Mascota </label>
+        <input id="sexPet" name="sexPet"> <br> <br>
+        <label> Color Mascota </label>
+        <input id="colorPet" name="colorPet"> <br> <br>
+        <label> Peso Mascota </label>
+        <input id="pesoPet" name="pesoPet"> <br> <br>
+        <button id="btnRegistrarPet" type="submit"> Registrar </button>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+}
+
+.container1 {
+    flex: 1;
+    display: flex;
+    background-color: black;
+}
+
+.tittleOne {
+    padding: 50px 50px 50px 50px;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    line-height: 59px;
+    font-family: fantasy;
+}
+
+.conte {
+    color: white;
+    font-family: emoji;
+    line-height: 1;
+    font-size: 20px;
+    text-align: initial;
+}
+
+.boton-redondeado {
+    border-radius: 20px;
+    width: 100px;
+    height: 40px;
+    background-color: rgb(237, 237, 237);
+    color: black;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s;
+}
+
+.boton-redondeado:hover {
+    background-color: white
+}

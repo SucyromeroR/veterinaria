@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 80px;
+    height: auto;
+    background-color: #000000;
+}
+
+.content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.top-row {
+    height: 40%;
+    background-color: #2196F3;
+}
+
+.bottom-row {
+    height: 80%;
+    background-color: hsl(0, 0%, 100%);
+}
+
+.menu-icon {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.menu-icon {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    color: #ffffff;
+    margin: 12px;
+}
+
+
+.iconMenu {
+    width: 30px;
+    height: 30px;
+    margin: 12px;
+}
+
+
+.icon-container {
+    display: flex;
+    align-items: center;
+    margin: 120px 120px 0px 120px;
+}
+
+.description {
+    display: flex;
+    align-items: center;
+    margin: 10px 120px 0px 120px;
+}
+
+.iconMenusContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 7%;
+}
+
+.iconMenus {
+    width: 150px;
+    height: 150px;
+}
+
+.tittles {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.boton-redondeado {
+    border-radius: 20px;
+    width: 100px;
+    height: 40px;
+    background-color: rgb(237, 237, 237);
+    color: black;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s;
+}

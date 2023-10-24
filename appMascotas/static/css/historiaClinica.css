@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 80px;
+    height: auto;
+    background-color: #000000;
+}
+
+.content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.top-row {
+    height: 40%;
+    background-color: #2196F3;
+}
+
+.bottom-row {
+    height: 80%;
+    background-color: hsl(0, 0%, 100%);
+}
+
+.menu-icon {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.menu-icon {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    color: #ffffff;
+    margin: 12px;
+}
+
+
+.iconMenu {
+    width: 30px;
+    height: 30px;
+    margin: 12px;
+}
+
+
+.icon-container {
+    display: flex;
+    align-items: center;
+    margin-top: 28px;
+    margin-left: 10%;
+}
+
+.custom-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.custom-table th {
+    background-color: white;
+    text-align: center;
+    padding: 8px;
+    border: none;
+}
+
+.custom-table td {
+    text-align: center;
+    padding: 8px;
+    border: 1px solid black;
+}
+
+.iconMenusContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+}
+table {
+    width: 60%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-left: 40px;
+}
+
+th, td {
+    text-align: left;
+}
+
+th {
+    font-weight: bold;
+}
+
+.spacer {
+    width: 1%;
+}
+
+.boton-redondeado {
+    border-radius: 20px;
+    width: 100px;
+    height: 40px;
+    background-color: rgb(237, 237, 237);
+    color: black;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s;
+}
